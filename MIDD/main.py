@@ -19,8 +19,8 @@ if __name__ == "__main__":
     org /= np.max(org)
     
     raw1 = forward_model(org, angle=angle[0], stripe_amplitude=stripe_amplitude, noise_level=noise_level)
-    raw2 = forward_model(org, angle=angle[0], stripe_amplitude=stripe_amplitude, noise_level=noise_level)
-    raw3 = forward_model(org, angle=angle[0], stripe_amplitude=stripe_amplitude, noise_level=noise_level)
+    raw2 = forward_model(org, angle=angle[1], stripe_amplitude=stripe_amplitude, noise_level=noise_level)
+    raw3 = forward_model(org, angle=angle[2], stripe_amplitude=stripe_amplitude, noise_level=noise_level)
     raws = torch.zeros((3,1,org.shape[0],org.shape[1])).float()
     raws[0,0] = torch.from_numpy(raw1)
     raws[1,0] = torch.from_numpy(raw2)
